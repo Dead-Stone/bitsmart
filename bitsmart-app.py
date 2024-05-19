@@ -15,8 +15,7 @@ def load_model(model_path):
     return model
 st.title('BitSmart - Bitcoin Price Prediction and Trading Strategy')
 
-st.sidebar.header('User Input Features')
-date = st.sidebar.date_input("Select a Date", datetime.date(2024, 4, 20))
+# st.sidebar.header('User Input Features')
 
 data_load_state = st.text('Loading data...')
 data = load_data('BTC-USD.csv')
@@ -25,10 +24,11 @@ data_load_state.text('Loading data...done!')
 model_load_state = st.text('Loading model...')
 model = load_model('Bitcoin_LSTM_Model.keras')
 model_load_state.text('Loading model...done!')
+date = st.date_input("Select a Date", datetime.date(2024, 4, 20))
 
-st.subheader('Historical Bitcoin Prices')
-st.write(data.tail())
-def predict():    # streamlit_app.py
+# st.subheader('Historical Bitcoin Prices')
+# st.write(data.tail())
+def predict():   
 
 
     
@@ -144,9 +144,8 @@ def predict():    # streamlit_app.py
     except Exception as e:
         st.error(f"Error: {e}")
 
-if st.button('Predict'):
-    predict()
-    st.write('Predictions and strategy generated!')
+predict()
+st.write('Predictions and strategy generated!')
 
 if __name__ == '__main__':
-    st.write('BitSmart app is running.')
+    st.write('')
