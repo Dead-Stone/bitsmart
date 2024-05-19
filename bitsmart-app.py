@@ -24,7 +24,6 @@ data_load_state.text('Loading data...done!')
 model_load_state = st.text('Loading model...')
 model = load_model('Bitcoin_LSTM_Model.keras')
 model_load_state.text('Loading model...done!')
-date = st.date_input("Select a Date", datetime.date(2024, 4, 20))
 
 # st.subheader('Historical Bitcoin Prices')
 # st.write(data.tail())
