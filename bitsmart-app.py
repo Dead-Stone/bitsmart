@@ -16,6 +16,7 @@ def load_model(model_path):
 st.title('BitSmart - Bitcoin Price Prediction and Trading Strategy')
 
 # st.sidebar.header('User Input Features')
+date = st.date_input("Select a Date", datetime.date(2024, 4, 20))
 
 data_load_state = st.text('Loading data...')
 data = load_data('BTC-USD.csv')
