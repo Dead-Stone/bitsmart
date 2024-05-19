@@ -18,13 +18,13 @@ st.title('BitSmart - Bitcoin Price Prediction and Trading Strategy')
 # st.sidebar.header('User Input Features')
 date = st.date_input("Select a Date", datetime.date(2024, 4, 20))
 
-data_load_state = st.text('Loading data...')
+# data_load_state = st.text('Loading data...')
 data = load_data('BTC-USD.csv')
-data_load_state.text('Loading data...done!')
+# data_load_state.text('Loading data...done!')
 
-model_load_state = st.text('Loading model...')
+# model_load_state = st.text('Loading model...')
 model = load_model('Bitcoin_LSTM_Model.keras')
-model_load_state.text('Loading model...done!')
+# model_load_state.text('Loading model...done!')
 
 # st.subheader('Historical Bitcoin Prices')
 # st.write(data.tail())
